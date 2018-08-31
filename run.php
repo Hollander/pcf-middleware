@@ -1,4 +1,5 @@
-<?php
+<pre>
+  <?php
 
 // errors
 ini_set('display_errors', 1); error_reporting(E_ALL | E_STRICT);
@@ -37,3 +38,4 @@ if ( isset( $_GET['script'] ) && !empty( $_GET['script'] ) ) {
 }
 
 ?>
+</pre>
