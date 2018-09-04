@@ -4,6 +4,9 @@
 // errors
 ini_set('display_errors', 1); error_reporting(E_ALL | E_STRICT);
 
+// composer
+require_once 'vendor/autoload.php';
+
 // includes
 include_once( dirname(__FILE__) . "/includes/Config.php");
 include_once( dirname(__FILE__) . "/includes/Log.php");

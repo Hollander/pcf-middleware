@@ -57,6 +57,16 @@ class Data {
     return true;
   }
 
+  static function selectFirst($table, $fields, $query) {
+    $rows = Data::select($table, $fields, $query);
+    if ($rows && !empty($rows)) {
+      return $rows[0];
+    }
+    else {
+      return false;
+    }
+  }
+
   static function select($table, $fields, $query) {
     $result = array();
 

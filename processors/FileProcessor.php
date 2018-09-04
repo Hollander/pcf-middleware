@@ -1,6 +1,5 @@
 <?php
 
-include_once( dirname(__FILE__) . "/../includes/Data.php");
 include_once( dirname(__FILE__) . "/Processor.php");
 
 class FileProcessor extends Processor {

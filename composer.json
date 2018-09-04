@@ -1,0 +1,5 @@
+{
+    "require": {
+        "infusionsoft/php-sdk": "dev-master"
+    }
+}
