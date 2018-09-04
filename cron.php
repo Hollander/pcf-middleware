@@ -12,6 +12,7 @@ include_once( dirname(__FILE__) . "/includes/Log.php");
 include_once( dirname(__FILE__) . "/includes/Cron.php");
 include_once( dirname(__FILE__) . "/includes/Queue.php");
 include_once( dirname(__FILE__) . "/processors/OrderCreateProcessor.php");
+include_once( dirname(__FILE__) . "/Includes/InfusionsoftClient.php");
 
 // config init
 $config = Config::Instance();
@@ -27,6 +28,9 @@ foreach($config->settings['middleware']['cron'] as $script => $schedule) {
         switch ($script) {
           case 'order-create':
             $processor = new OrderCreateProcessor($script);
+            break;
+          case 'is-token-refresh':
+            $crm = new InfusionsoftClient();
             break;
           default:
             break;
